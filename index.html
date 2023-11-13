@@ -56,7 +56,11 @@
         .topnav {
             background;
             background-color: rgba(0,0,0,0.6);
-            overflow: hidden;
+            overflow: visible;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
         }
 
         /* Style the links inside the navigation bar */
@@ -117,33 +121,53 @@
             color: white;
         }
         h3{
-            font-size: 30px;
+            font-size: 40px;
             font-family: Futura Md BT;
             color: white;
         }
         h4{
-            font-size: ;
+            font-size: 30px;
             font-family: Futura Md BT;
             color: white;
         }
+        p{
+            font-size: 20px;
+            font-family: calibri;
+        }
         label{
             color: white;
+            font-size: 20px ;
+        }
+        input{
+            width: 100%;
         }
         input[type=text] {
         border: none;
         border-bottom: 1px solid white;
-        background: none;
+        background: rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        color: white;
         }
         input[type=int] {
         border: none;
         border-bottom: 1px solid white;
-        background: none;
+        background: ;
         }
         input[type=text]:focus{
             outline: none;
+            border-bottom: 3px solid #ffffff;
+            color: white;
         }
-        input[type=int]:focus{
-            outline: none;
+        input[type=submit]{
+            width: 50%;
+            border-color: rgba(255,255,255,0.7);
+            background: rgba(255,255,255,0.5);
+            font-size: 20px;
+        }
+        input[type=submit]:focus{
+            border: none;
+            border-bottom: 1px solid white;
+            background: white;
         }
         .text-center{
             color: white;
@@ -170,11 +194,11 @@
     </div> -->
     <div class="topnav">
         <div class="row">
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <img src="LogoDinamikaWcut.png" style="width: 150px;">
             </div>
-            <div class="col-md-11">
-                <a href="#home"></a>
+            <div class="col-md-10">
+                <a href="#tentang">Tentang</a>
                 <a href= #formdftr>Form Pendaftaran</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -190,6 +214,8 @@
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span> -->
             </div>
             <div class="col-md-10">
+                <br>
+                <br>
                 <br>
                 <br>
                 <br>
@@ -217,6 +243,40 @@
     <br>
     <br>
     <br>
+    <div id="tentang"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container" data-aos="zoom-in-up" data-aos-duration="1200">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10" >
+                <center><h3>Tentang Open House</h3></center>
+                <p class="text-center">Ayo ikuti acara Open House Universitas Dinamika Surabaya pada 15,16,17,19, 22 Mei 2023. Di acara ini kamu bisa mengenal lebih dekat dengan kampus dan prodi impian. Dapatkan kesempatan mengikuti Trial Class, Talkshow dengan topik yang kece dan kekinian, dan Tour de Campus. </p>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div id="formdftr"></div>
     <br>
     <br>
@@ -225,46 +285,35 @@
     <br>
     <br>
     <br>
-    <form action="proses_pendaftaran.php" method="post"></form>
-    <div class="container">
+    <br>
+    <div class="container" >
         <div class="row">
-            <div class="col-md-5" >
-                <center><h3>Tentang Open House</h3></center>
-                <p class="text-center">Ayo ikuti acara Open House Universitas Dinamika Surabaya pada 15,16,17,19, 22 Mei 2023. Di acara ini kamu bisa mengenal lebih dekat dengan kampus dan prodi impian. Dapatkan kesempatan mengikuti Trial Class, Talkshow dengan topik yang kece dan kekinian, dan Tour de Campus. </p>
-            </div>
-            <div class="col-md-1">
+            <div class="col-md-3">
 
             </div>
             <div class="col-md-6">
-                <center><h3>Formulir Pendaftaran Kuliah</h3></center>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3"><label for="nama">Nama</label></div>
-                    <div class="col-md-7">&ensp; &ensp; <input type="text" id="nama" name="nama" required></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3"><label for="email">Email</label></div>
-                    <div class="col-md-7">&ensp; &ensp; <input type="text" id="email" name="email" required><br></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3"><label for="No_Hp">No HP:</label></div>
-                    <div class="col-md-7">&ensp; &ensp; <input type="int" id="No_Hp" name="No_Hp" required><br></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3"><label for="prodi">Prodi:</label></div>
-                    <div class="col-md-7">&ensp; &ensp; <input type="text" id="Prodi" name="Prodi" required><br></div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-12"><center><input type="submit" value="Daftar" class="btn btn-outline-light"></center></div>
-                </div>
+                    
+                <form action="proses_pendaftaran.php" method="post"></form>
+                    <center><h3>Formulir Pendaftaran Kuliah</h3></center>
+                    <label for="nama">Nama:</label><br>
+                    <center><input type="text" id="nama" name="nama" required></center><br>
+                    <label for="email">Email:</label><br>
+                    <center><input type="text" id="email" name="email" required></center><br>
+                    <label for="No_Hp">No HP:</label><br>
+                    <center><input type="text" id="No_Hp" name="No_Hp" required></center><br>
+                    <label for="Asal_Sek">Asal Sekolah:</label><br>
+                    <center><input type="text" id="Asal_sek" name="Asal_Sek" required></center><br>
+                    <label for="Jurusan">Jurusan :</label><br>
+                    <center><input type="text" id="jurusan" name="jurusan" required></center><br>
+                    <label for="Tinggal">Tinggal di Kota/Kabupaten:</label><br>
+                    <center><input type="text" id="tinggal" name="tinggal" required></center><br>
+                    <center><input type="submit" value="Daftar"></center>
+            </div>
+            <div class="col-md-3">
+
             </div>
         </div>
     </div>
-    </form>
     <br>
     <br>
     <br>
@@ -316,5 +365,11 @@
 	</div>
     
     <img id="cover" src="tgb.png">
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
 </body>
 </html> 
